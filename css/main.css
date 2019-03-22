@@ -19,6 +19,13 @@
     font-style: normal;
 }
 
+.gradient-text {
+    background: linear-gradient(45deg, #000, #6a4e58);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: table;
+}
+
 figure {
     margin: 0;
 }
@@ -44,9 +51,13 @@ body {
 }
 
 .b-container {
-    max-width: 1268px;
+    max-width: 1178px;
     margin: 0 auto;
     padding: 0 14px;
+}
+
+header {
+    height: 100vh;
 }
 
 .menu {
@@ -133,6 +144,24 @@ a {
     justify-content: center;
 }
 
+.app-menu:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -35px;
+    top: 30px;
+    cursor: pointer;
+}
+
+.app-menu img {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    width: 20px;
+}
+
 .app-menu a {
     padding: 20px;
     color: #050708;
@@ -201,8 +230,22 @@ a {
     text-align: center;
 }
 
+.aqouy {
+    position: absolute;
+    right: 0px;
+    bottom: 5px;
+    width: 49px;
+}
+
+.aqouy img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
 header {
     background: #050708;
+    background: linear-gradient(to bottom right, #050708, #201016);
 }
 
 .heder__title {
@@ -274,21 +317,33 @@ header {
 }
 
 .main {
-    background-image: url('../images/bac-main.png');
+    /* background-image: url('../images/bac-main.png'); */
     background-size: cover;
     background-repeat: no-repeat;
+    background: linear-gradient(to top right, #d7dde0, #e0dbdf, #e0dbdf, #ead9df);
 }
 
 /* /////////////// */
 
 .company h2 {
     margin-bottom: 57px;
+    position: relative;
 }
 
 .company {
     padding: 154px 55px 0 55px;
-    border-bottom: 1px solid #000;
-    padding-bottom: 192px;
+    padding-bottom: 211px;
+}
+
+.company h2:before {
+    content: '';
+    height: 2px;
+    width: 514px;
+    display: block;
+    bottom: -1px;
+    position: absolute;
+    left: 0px;
+    background: linear-gradient(45deg, #386f6c, #9e687b);
 }
 
 .__title {
@@ -310,6 +365,20 @@ header {
     border-bottom: 1px solid;
     padding: 0 65px;
     padding-bottom: 29px;
+}
+
+#prixe {
+    position: relative;
+}
+
+#prixe:before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    display: block;
+    top: 0;
+    position: absolute;
+    background: linear-gradient(45deg, #386f6c, #9e687b);
 }
 
 .company p {
@@ -422,7 +491,6 @@ header {
 }
 
 p.wq {
-    color: #a7a6ac;
     font-size: 22px;
     max-width: 404px;
 }
@@ -438,7 +506,7 @@ p.wq::before {
     content: '';
     width: 188px;
     height: 2px;
-    background-color: #a7a6ac;
+    background: linear-gradient(45deg, #386f6c, #9e687b);
 }
 
 .wrap3-imgafe__right img {
@@ -516,7 +584,21 @@ p.sar:before {
 
 .opt__title {
     padding-bottom: 35px;
-    border-bottom: 1px solid #513241;
+    position: relative;
+}
+
+.opt__title:before {
+    content: '';
+    height: 2px;
+    width: 100%;
+    display: block;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(45deg, #386f6c, #9e687b);
+}
+
+.opt__title-wwwwww:before {
+    width: 40%;
 }
 
 .opt__wrap-text {
@@ -581,7 +663,7 @@ p.sar:before {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background: linear-gradient(45deg, #386f6c, #9e687b);
     top: 0;
     right: 198px;
 }
@@ -638,10 +720,19 @@ p.sar:before {
 /* interior:start */
 
 .interior {
-    border-top: 2px solid #000;
+    position: relative;
     padding-top: 66px;
     margin-top: 117px;
     padding-bottom: 163px;
+}
+
+.interior:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(45deg, #386f6c, #9e687b);
+    top: 0;
 }
 
 .interior__wrap-img {
@@ -694,7 +785,7 @@ p.sar:before {
 }
 
 .footer {
-    background-image: url('../images/foot-bac.jpg');
+    background-image: url('../images/foot-bac.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -737,7 +828,7 @@ p.sar:before {
     margin: 0 auto;
     font-size: 25px;
     padding-top: 10px;
-    padding-left: 35px;
+    /* padding-left: 35px; */
 }
 
 .footer__list li {
@@ -777,6 +868,7 @@ p.sar:before {
 .footer__wrap-cocial span {
     font-size: 34px;
     color: #000;
+    font-family: 'TrebuchetBold';
 }
 
 .footer__wrap-cocial a {
@@ -1051,5 +1143,12 @@ p.sar:before {
     }
     .footer__wrap-cocial span {
         font-size: 21px;
+    }
+    .company h2:before {
+        content: '';
+        display: none;
+    }
+    .footer__list {
+        padding-left: 35px;
     }
 }
